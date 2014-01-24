@@ -1,0 +1,7 @@
+---
+- name: Install Zsh
+  apt: pkg=zsh state=installed
+
+- name: Zsh configuration
+  shell: wget https://raw.github.com/thbourlove/zsh/master/install -O - | sh creates={{ home_dir }}/.zshrc
+  sudo: no

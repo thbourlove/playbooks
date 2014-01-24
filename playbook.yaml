@@ -1,0 +1,12 @@
+---
+- hosts: vagrant-0
+  remote_user: vagrant
+  sudo: yes
+  roles:
+    - common
+    - git
+    - tmux
+    - vim
+    - zsh
+    - nginx
+    - php

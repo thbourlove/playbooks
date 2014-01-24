@@ -1,0 +1,7 @@
+---
+server_hostname: www.example.com
+
+ubuntu_sources_server: mirrors.163.com
+ubuntu_release_name: saucy
+
+home_dir: /home/vagrant

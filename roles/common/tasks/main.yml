@@ -1,0 +1,11 @@
+---
+- name: Copy sources.list
+  template: src=sources.list dest=/etc/apt/sources.list
+  notify: apt update
+
+- name: Install common tools
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - git
+    - zsh
+    - mercurial

@@ -1,0 +1,9 @@
+###### Ubuntu Main Repos
+deb http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }} main universe
+deb-src http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }} main universe
+
+###### Ubuntu Update Repos
+deb http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }}-security main universe
+deb http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }}-updates main universe
+deb-src http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }}-security main universe
+deb-src http://{{ ubuntu_sources_server }}/ubuntu/ {{ ubuntu_release_name }}-updates main universe

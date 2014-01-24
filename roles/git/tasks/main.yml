@@ -1,0 +1,6 @@
+---
+- name: Install git
+  apt: pkg=git state=installed
+
+- name: Copy git configuration
+  template: src=gitconfig dest={{ home_dir }}/.gitconfig
