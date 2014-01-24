@@ -1,0 +1,9 @@
+---
+- name: Install composer
+  uri:
+    url=https://getcomposer.org/composer.phar
+    dest=/usr/bin/composer
+    creates=/usr/bin/composer
+    owner=root
+    group=root
+    mode=0755
