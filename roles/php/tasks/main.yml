@@ -22,3 +22,4 @@
     - php-pear
 
 - include: composer.yml
+- include: phpunit.yml

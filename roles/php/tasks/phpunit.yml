@@ -1,0 +1,9 @@
+---
+- name: Install phpunit
+  uri:
+    url=https://phar.phpunit.de/phpunit.phar
+    dest=/usr/bin/phpunit
+    creates=/usr/bin/phpunit
+    owner=root
+    group=root
+    mode=0755
