@@ -1,4 +1,7 @@
 ---
+- name: Install mcrypt
+  apt: pkg=mcrypt state=installed
+
 - name: Install php and deps
   apt: pkg={{ item }} state=installed
   with_items:
@@ -19,7 +22,22 @@
     - php5-pgsql
     - php5-sqlite
     - php5-xhprof
+    - php5-mcrypt
     - php-pear
+
+- name: copy *.ini
+  copy:
+    src=mcrypt.ini
+    dest=/etc/php5/mods-available/mcrypt.ini
+    owner=root
+    group=root
+    mode=0664
+
+- name: link *.ini
+  file: state=link dest=/etc/php5/{{ item[0] }}/conf.d/30-{{ item[1] }}.ini src=../../mods-available/{{ item[1] }}.ini
+  with_nested:
+    - { 'cli', 'fpm' }
+    - { 'mongo', 'xhprof', 'mcrypt' }
 
 - include: composer.yml
 - include: phpunit.yml

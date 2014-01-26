@@ -4,3 +4,11 @@
 
 - name: Copy nginx configuration
   template: src=default.conf dest=/etc/nginx/sites-available/default
+
+- name: Mkdir {{ www_dir }}
+  file:
+    state=directory
+    dest={{ www_dir }}
+    owner=www-data
+    group=www-data
+    mode=0775

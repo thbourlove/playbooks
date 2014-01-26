@@ -1,0 +1,35 @@
+---
+- name: xhgui repo
+  git:
+    repo=https://github.com/perftools/xhgui.git
+    dest={{ www_dir }}/xhgui
+  sudo_user: www-data
+
+- name: xhgui composer install
+  command: composer install
+    chdir={{ www_dir }}/xhgui
+    creates={{ www_dir }}/xhgui/vendor
+  sudo_user: www-data
+
+- name: copy xhgui config
+  copy:
+    src=config.php
+    dest={{ www_dir }}/xhgui/config/config.php
+    owner=www-data
+    group=www-data
+    mode=0664
+  sudo_user: www-data
+
+- name: copy xhgui nginx config
+  copy:
+    src=xhgui.tools.com
+    dest=/etc/nginx/sites-available/xhgui.tools.com
+    owner=root
+    group=root
+    mode=0664
+
+- name: link xhgui nginx config
+  file:
+    state=link
+    dest=/etc/nginx/sites-enabled/xhgui.tools.com
+    src=../sites-available/xhgui.tools.com
