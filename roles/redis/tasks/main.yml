@@ -1,0 +1,3 @@
+---
+- name: Install composer
+  apt: pkg=redis-server state=installed
