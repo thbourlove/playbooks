@@ -24,14 +24,17 @@
     - php5-xhprof
     - php5-mcrypt
     - php-pear
+    - libpcre3-dev
 
 - name: copy *.ini
   copy:
-    src=mcrypt.ini
-    dest=/etc/php5/mods-available/mcrypt.ini
+    src={{ item }}.ini
+    dest=/etc/php5/mods-available/{{ item }}.ini
     owner=root
     group=root
     mode=0664
+  with_items:
+    - mcrypt
 
 - name: link *.ini
   file: state=link dest=/etc/php5/{{ item[0] }}/conf.d/30-{{ item[1] }}.ini src=../../mods-available/{{ item[1] }}.ini

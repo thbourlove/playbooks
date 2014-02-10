@@ -6,6 +6,7 @@
 - name: Install common tools
   apt: pkg={{ item }} state=installed
   with_items:
+    - apt-file
     - git
     - zsh
     - mercurial

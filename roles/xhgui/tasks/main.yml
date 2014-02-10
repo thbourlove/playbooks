@@ -3,6 +3,7 @@
   git:
     repo=https://github.com/perftools/xhgui.git
     dest={{ www_dir }}/xhgui
+    update=no
   sudo_user: www-data
 
 - name: xhgui composer install
