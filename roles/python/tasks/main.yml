@@ -1,0 +1,15 @@
+---
+- name: Install python
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - python
+    - python3
+    - python-dev
+    - python3-dev
+    - python-pip
+
+- name: Copy pip configuration
+  copy:
+    src=pip.conf
+    dest={{ home_dir }}/.pip/pip.conf
+    mode=0644
