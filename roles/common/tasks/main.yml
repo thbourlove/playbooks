@@ -7,9 +7,11 @@
   apt: pkg={{ item }} state=installed
   with_items:
     - apt-file
+    - unzip
     - git
     - zsh
     - mercurial
     - vim
     - tmux
     - tree
+    - cscope
