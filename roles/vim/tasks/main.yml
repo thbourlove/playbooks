@@ -3,5 +3,5 @@
   apt: pkg=vim state=installed
 
 - name: Vim configuration
-  shell: wget https://raw.github.com/thbourlove/vim/master/install -O - | sh creates={{ home_dir }}/.vimrc
+  shell: wget https://raw.github.com/thbourlove/vim/master/install -O - | sh creates=/home/{{ username }}/.vimrc
   sudo: no

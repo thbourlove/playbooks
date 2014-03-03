@@ -9,4 +9,4 @@
     - python-pip
 
 - name: Copy pip configuration
-  template: src=pip.conf dest={{ home_dir }}/.pip/pip.conf
+  template: src=pip.conf dest=/home/{{ username }}/.pip/pip.conf

@@ -3,5 +3,5 @@
   apt: pkg=zsh state=installed
 
 - name: Zsh configuration
-  shell: wget https://raw.github.com/thbourlove/zsh/master/install -O - | sh creates={{ home_dir }}/.zshrc
+  shell: wget https://raw.github.com/thbourlove/zsh/master/install -O - | sh creates=/home/{{ username }}/.zshrc
   sudo: no

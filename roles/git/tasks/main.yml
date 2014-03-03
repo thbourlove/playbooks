@@ -3,4 +3,4 @@
   apt: pkg=git state=installed
 
 - name: Copy git configuration
-  template: src=gitconfig dest={{ home_dir }}/.gitconfig
+  template: src=gitconfig dest=/home/{{ username }}/.gitconfig
