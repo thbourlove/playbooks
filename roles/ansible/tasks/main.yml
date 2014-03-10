@@ -1,0 +1,19 @@
+---
+- name: Install ansible
+  pip: name=ansible state=present
+
+- name: mkdir ansible hosts
+  file:
+    state=directory
+    dest=/etc/ansible
+    owner=vagrant
+    group=vagrant
+    mode=0775
+
+- name: Copy ansible configuration
+  copy:
+    src=hosts
+    dest=/etc/ansible/hosts
+    owner=vagrant
+    group=vagrant
+    mode=0664
