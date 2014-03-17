@@ -8,5 +8,13 @@
     - python3-dev
     - python-pip
 
+- name: Mkdir ~/.pip
+  file:
+    state=directory
+    dest=/home/{{ username }}/.pip
+    owner={{ username }}
+    group={{ username }}
+    mode=0775
+
 - name: Copy pip configuration
   template: src=pip.conf dest=/home/{{ username }}/.pip/pip.conf
