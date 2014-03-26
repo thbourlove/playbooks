@@ -10,6 +10,7 @@
     - zsh
     - nginx
     - mongodb
+    - mysql
     - php
     - xhgui
     - redis
