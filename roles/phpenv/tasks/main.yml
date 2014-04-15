@@ -1,0 +1,11 @@
+---
+- name: Git clone phpenv
+  git:
+    repo=git://github.com/CHH/phpenv.git
+    dest=/tmp/phpenv-git-repo
+    update=no
+
+- name: install phpenv
+  command: bin/phpenv-install.sh
+    chdir=/tmp/phpenv-git-repo
+    creates=/home/{{ username }}/.phpenv/

@@ -18,3 +18,4 @@
     - ansible
     - playbooks
     - php_build
+    - phpenv
