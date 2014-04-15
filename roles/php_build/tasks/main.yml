@@ -1,0 +1,12 @@
+---
+- name: Git clone php-build
+  git:
+    repo=git://github.com/CHH/php-build.git
+    dest=/tmp/php-build-git-repo
+    update=no
+
+- name: install php-build
+  command: PREFIX=/usr ./install.sh
+    chdir=/tmp/php-build-git-repo
+    creates=/usr/bin/php-build
+  sudo_user: root

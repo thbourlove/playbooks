@@ -3,16 +3,17 @@
   remote_user: vagrant
   sudo: yes
   roles:
-    - common
-    - git
-    - tmux
-    - vim
-    - zsh
-    - nginx
-    - mongodb
-    - php
-    - xhgui
-    - redis
-    - python
-    - ansible
-    - playbooks
+    #- common
+    #- git
+    #- tmux
+    #- vim
+    #- zsh
+    #- nginx
+    #- mongodb
+    #- php
+    #- xhgui
+    #- redis
+    #- python
+    #- ansible
+    #- playbooks
+    - php_build
