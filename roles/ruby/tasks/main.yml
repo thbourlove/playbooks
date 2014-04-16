@@ -1,7 +1,9 @@
 ---
 - name: Install ruby
   apt: pkg=ruby state=installed
-  sudo: yes
+
+- name: Install ruby-dev
+  apt: pkg=ruby-dev state=installed
 
 - name: Copy config files
   copy:
