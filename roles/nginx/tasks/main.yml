@@ -2,9 +2,6 @@
 - name: Install Nginx
   apt: pkg=nginx state=installed
 
-- name: Copy nginx configuration
-  template: src=default.conf dest=/etc/nginx/sites-available/default
-
 - name: Mkdir {{ www_dir }}
   file:
     state=directory
