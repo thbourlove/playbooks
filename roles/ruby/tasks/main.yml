@@ -1,0 +1,9 @@
+---
+- name: Install ruby
+  apt: pkg=ruby state=installed
+  sudo: yes
+
+- name: Copy config files
+  copy:
+    src=gemrc
+    dest=/home/{{ username }}/.gemrc
