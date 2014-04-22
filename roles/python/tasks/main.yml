@@ -7,6 +7,7 @@
     - python-dev
     - python3-dev
     - python-pip
+  sudo: yes
 
 - name: Mkdir ~/.pip
   file:
@@ -15,6 +16,7 @@
     owner={{ username }}
     group={{ username }}
     mode=0775
+  sudo: yes
 
 - name: Copy pip configuration
   template: src=pip.conf dest=/home/{{ username }}/.pip/pip.conf

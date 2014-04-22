@@ -21,9 +21,9 @@
     enabled = 1
     autoupdate = 1
 [user]
-    name = thbourlove
-    email = thbourlove@gmail.com
+    name = {{ github_user }}
+    email = {{ github_email }}
 [merge]
     tool = vimdiff
 [github]
-    user = thbourlove
+    user = {{ github_user }}

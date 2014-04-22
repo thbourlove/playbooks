@@ -1,19 +1,22 @@
 ---
 - name: Install ansible
   pip: name=ansible state=present
+  sudo: yes
 
 - name: mkdir ansible hosts
   file:
     state=directory
     dest=/etc/ansible
-    owner=vagrant
-    group=vagrant
+    owner={{ username }}
+    group={{ username }}
     mode=0775
+  sudo: yes
 
 - name: Copy ansible configuration
   copy:
     src=hosts
     dest=/etc/ansible/hosts
-    owner=vagrant
-    group=vagrant
+    owner={{ username }}
+    group={{ username }}
     mode=0664
+  sudo: yes

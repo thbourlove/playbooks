@@ -1,10 +1,5 @@
 ---
 username: vagrant
-
-server_hostname: www.example.com
-
-ubuntu_sources_server: mirrors.163.com
+ubuntu_sources_server: mirrors.aliyun.com
 ubuntu_release_name: saucy
-
-
 www_dir: /srv/www

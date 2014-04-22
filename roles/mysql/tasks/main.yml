@@ -1,3 +1,4 @@
 ---
 - name: Install Mysql
   apt: pkg=mysql-server state=installed
+  sudo: yes

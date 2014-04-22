@@ -4,12 +4,14 @@
     repo=https://github.com/perftools/xhgui.git
     dest={{ www_dir }}/xhgui
     update=no
+  sudo: yes
   sudo_user: www-data
 
 - name: xhgui composer install
   command: composer install
     chdir={{ www_dir }}/xhgui
     creates={{ www_dir }}/xhgui/vendor
+  sudo: yes
   sudo_user: www-data
 
 - name: copy xhgui config
@@ -19,6 +21,7 @@
     owner=www-data
     group=www-data
     mode=0664
+  sudo: yes
   sudo_user: www-data
 
 - name: copy xhgui nginx config
@@ -28,9 +31,11 @@
     owner=root
     group=root
     mode=0664
+  sudo: yes
 
 - name: link xhgui nginx config
   file:
     state=link
     dest=/etc/nginx/sites-enabled/xhgui.tools.com
     src=../sites-available/xhgui.tools.com
+  sudo: yes

@@ -1,6 +1,7 @@
 ---
 - name: Install Nginx
   apt: pkg=nginx state=installed
+  sudo: yes
 
 - name: Mkdir {{ www_dir }}
   file:
@@ -9,3 +10,4 @@
     owner=www-data
     group=www-data
     mode=0775
+  sudo: yes

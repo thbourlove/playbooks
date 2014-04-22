@@ -1,6 +1,7 @@
 ---
 - name: Install git
   apt: pkg=git state=installed
+  sudo: yes
 
 - name: Copy git configuration
   template: src=gitconfig dest=/home/{{ username }}/.gitconfig

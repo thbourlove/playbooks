@@ -1,10 +1,11 @@
 ---
 - name: Install tmux
   apt: pkg=tmux state=installed
+  sudo: yes
 
 - name: Install ifstat for tmux powerline
   apt: pkg=ifstat state=installed
+  sudo: yes
 
 - name: Tmux configuration
   shell: wget https://raw.github.com/thbourlove/tmux/master/install -O - | sh creates=/home/{{ username }}/.tmux.conf
-  sudo: no

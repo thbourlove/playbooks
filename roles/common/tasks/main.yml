@@ -2,6 +2,7 @@
 - name: Copy sources.list
   template: src=sources.list dest=/etc/apt/sources.list
   notify: apt update
+  sudo: yes
 
 - name: Install common tools
   apt: pkg={{ item }} state=installed
@@ -15,3 +16,5 @@
     - tmux
     - tree
     - cscope
+    - ctags
+  sudo: yes

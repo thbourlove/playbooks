@@ -4,4 +4,4 @@
     repo=https://github.com/thbourlove/playbooks.git
     dest=/home/{{ username }}/develop/playbooks
     update=no
-  sudo_user: vagrant
+  sudo: yes

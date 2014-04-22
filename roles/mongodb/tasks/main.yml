@@ -1,3 +1,4 @@
 ---
 - name: Install Mongodb
   apt: pkg=mongodb state=installed
+  sudo: yes
