@@ -1,0 +1,4 @@
+Host github.com
+    Hostname 192.30.252.131
+    User git
+    Identityfile /home/{{ username }}/.ssh/github

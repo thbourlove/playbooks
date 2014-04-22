@@ -4,3 +4,4 @@ ubuntu_sources_server: mirrors.aliyun.com
 www_dir: /srv/www
 github_username: thbourlove
 github_email: thbourlove@gmail.com
+github_sshkey: /Users/thbourlove/.ssh/github

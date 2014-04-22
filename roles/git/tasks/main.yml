@@ -5,3 +5,6 @@
 
 - name: Copy git configuration
   template: src=gitconfig dest=/home/{{ username }}/.gitconfig
+
+- name: Copy git ssh config
+  template: src=sshconfig dest=/home/{{ username }}/.ssh/config
