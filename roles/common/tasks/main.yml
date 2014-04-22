@@ -4,6 +4,10 @@
   notify: apt update
   sudo: yes
 
+- name: apt update
+  apt: update_cache=yes
+  sudo: yes
+
 - name: Install common tools
   apt: pkg={{ item }} state=installed
   with_items:
@@ -16,5 +20,4 @@
     - tmux
     - tree
     - cscope
-    - ctags
   sudo: yes

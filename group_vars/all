@@ -1,5 +1,6 @@
 ---
 username: vagrant
 ubuntu_sources_server: mirrors.aliyun.com
-ubuntu_release_name: saucy
 www_dir: /srv/www
+github_username: thbourlove
+github_email: thbourlove@gmail.com

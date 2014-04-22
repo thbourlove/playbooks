@@ -2,13 +2,11 @@
 - hosts: all
   roles:
     - common
-    - git
-    - tmux
-    - vim
-    - zsh
-    - nginx
-    - php
-    - ruby
-    - python
-    - ansible
-    - playbooks
+    #- git
+    #- tmux
+    #- nginx
+    #- php
+    #- ruby
+    #- python
+    #- ansible
+    #- playbooks
