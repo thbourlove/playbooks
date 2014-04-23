@@ -1,7 +1,6 @@
 ---
 - name: Copy sources.list
   template: src=sources.list dest=/etc/apt/sources.list
-  notify: apt update
   sudo: yes
 
 - name: apt update
