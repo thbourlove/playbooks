@@ -40,7 +40,7 @@
   sudo: yes
 
 - name: link *.ini
-  file: state=link dest=/etc/php5/{{ item[0] }}/conf.d/30-{{ item[1] }}.ini src=../../mods-available/{{ item[1] }}.ini
+  file: state=link dest=/etc/php5/{{ item[0] }}/conf.d/20-{{ item[1] }}.ini src=../../mods-available/{{ item[1] }}.ini
   with_nested:
     - { 'cli', 'fpm' }
     - { 'mongo', 'xhprof', 'mcrypt' }
