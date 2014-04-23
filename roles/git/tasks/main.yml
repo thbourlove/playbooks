@@ -8,3 +8,16 @@
 
 - name: Copy git ssh config
   template: src=sshconfig dest=/home/{{ username }}/.ssh/config
+
+- name: Install connect
+  apt: pkg=connect-proxy state=installed
+  sudo: yes
+
+- name: Copy socks5proxywrapper
+  copy:
+    src=socks5proxywrapper
+    dest=/usr/bin/socks5proxywrapper
+    owner=root
+    group=root
+    mode=0775
+  sudo: yes

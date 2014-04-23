@@ -15,6 +15,7 @@
 [core]
     editor = vim
     safecrlf = true
+    gitproxy = /usr/bin/socks5proxywrapper
 [push]
     default = current
 [rerere]
@@ -27,3 +28,5 @@
     tool = vimdiff
 [github]
     user = {{ github_username }}
+[http]
+    proxy = sock5://127.0.0.1:1080

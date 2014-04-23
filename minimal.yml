@@ -10,3 +10,4 @@
     - python
     - ansible
     - playbooks
+    - shadowsocks
