@@ -1,6 +1,6 @@
 ---
 - name: Install ansible
-  pip: name=ansible state=present
+  command: pip install https://github.com/ansible/ansible/archive/devel.zip creates=/usr/local/bin/ansible
   sudo: yes
 
 - name: mkdir ansible hosts
