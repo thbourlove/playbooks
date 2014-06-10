@@ -1,5 +1,5 @@
 Host github.com
     Hostname 192.30.252.131
     User git
-    ProxyCommand /usr/bin/socks5proxywrapper %h %p
+    #ProxyCommand /usr/bin/socks5proxywrapper %h %p
     Identityfile /home/{{ username }}/.ssh/github

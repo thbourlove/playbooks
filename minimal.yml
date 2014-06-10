@@ -3,11 +3,8 @@
   roles:
     - common
     - git
-    - tmux
     - nginx
     - php
     - ruby
     - python
     - ansible
-    - playbooks
-    - shadowsocks
