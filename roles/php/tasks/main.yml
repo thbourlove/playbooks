@@ -45,6 +45,3 @@
     - { 'cli', 'fpm' }
     - { 'mongo', 'xhprof', 'mcrypt' }
   sudo: yes
-
-- include: composer.yml
-- include: phpunit.yml
